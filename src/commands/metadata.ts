@@ -50,6 +50,15 @@ export const ChatCommandMetadata: {
     dm_permission: true,
     default_member_permissions: undefined,
   },
+  GPT: {
+    type: ApplicationCommandType.ChatInput,
+    name: Lang.getRef("chatCommands.gpt", Language.Default),
+    name_localizations: Lang.getRefLocalizationMap("chatCommands.gpt"),
+    description: Lang.getRef("commandDescs.gpt", Language.Default),
+    description_localizations: Lang.getRefLocalizationMap("commandDescs.gpt"),
+    dm_permission: true,
+    default_member_permissions: undefined,
+  },
 };
 
 export const MessageCommandMetadata: {

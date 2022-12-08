@@ -4,6 +4,7 @@ import { createRequire } from "node:module";
 
 import { Button } from "./buttons/index.js";
 import {
+  GptCommand,
   HelpCommand,
   InfoCommand,
   TestCommand,
@@ -73,6 +74,7 @@ async function start(): Promise<void> {
     new ViewDateJoined(),
 
     // TODO: Add new commands here
+    new GptCommand(),
   ];
 
   // Buttons

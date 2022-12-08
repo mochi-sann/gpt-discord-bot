@@ -56,6 +56,9 @@
       "test": {
         "description": "Test command works!"
       },
+      "gpt": {
+        "description": "GPT command works!"
+      },
       "viewDateJoined": {
         "description": "{{TARGET}} joined on {{DATE}}!"
       },
@@ -192,7 +195,8 @@
     "chatCommands": {
       "help": "help",
       "info": "info",
-      "test": "test"
+      "test": "test",
+      "gpt": "gpt"
     },
     "userCommands": {
       "viewDateJoined": "View Date Joined"
@@ -206,7 +210,8 @@
     "commandDescs": {
       "help": "Get help with commands, permissions, FAQ, etc.",
       "info": "View bot info.",
-      "test": "Run the test command."
+      "test": "Run the test command.",
+      "gpt": "Run the gpt command."
     },
     "argDescs": {
       "helpOption": "Option.",
