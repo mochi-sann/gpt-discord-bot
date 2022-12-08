@@ -27,6 +27,7 @@ import {
 } from "./events/index.js";
 import { CustomClient } from "./extensions/index.js";
 import { Job } from "./jobs/index.js";
+import { Config } from "./lib/config/config.js";
 import { Bot } from "./models/bot.js";
 import { Reaction } from "./reactions/index.js";
 import {
@@ -38,8 +39,9 @@ import {
 import { Trigger } from "./triggers/index.js";
 
 const require = createRequire(import.meta.url);
-let Config = require("../config/config.json");
 let Logs = require("../lang/logs.json");
+
+require("dotenv").config();
 
 async function start(): Promise<void> {
   // Services
@@ -47,10 +49,8 @@ async function start(): Promise<void> {
 
   // Client
   let client = new CustomClient({
-    intents: Config.client.intents,
-    partials: (Config.client.partials as string[]).map(
-      partial => Partials[partial]
-    ),
+    intents: Config.client.intents as any,
+    partials: Config.client.partials.map(partial => Partials[partial]),
     makeCache: Options.cacheWithLimits({
       // Keep default caching behavior
       ...Options.DefaultMakeCacheSettings,

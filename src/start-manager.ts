@@ -8,6 +8,7 @@ import {
   ShardsController,
 } from "./controllers/index.js";
 import { Job, UpdateServerCountJob } from "./jobs/index.js";
+import { Config } from "./lib/config/config.js";
 import { Api } from "./models/api.js";
 import { Manager } from "./models/manager.js";
 import {
@@ -19,7 +20,6 @@ import {
 import { MathUtils, ShardUtils } from "./utils/index.js";
 
 const require = createRequire(import.meta.url);
-let Config = require("../config/config.json");
 let Debug = require("../config/debug.json");
 let Logs = require("../lang/logs.json");
 

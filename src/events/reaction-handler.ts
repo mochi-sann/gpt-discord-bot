@@ -4,10 +4,10 @@ import { createRequire } from "node:module";
 
 import { Reaction } from "../reactions/index.js";
 import { EventDataService } from "../services/index.js";
+import { Config } from "../lib/config/config.js";
 import { EventHandler } from "./index.js";
 
 const require = createRequire(import.meta.url);
-let Config = require("../../config/config.json");
 
 export class ReactionHandler implements EventHandler {
   private rateLimiter = new RateLimiter(

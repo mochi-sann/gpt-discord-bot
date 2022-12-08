@@ -3,8 +3,9 @@ import { Response } from "node-fetch";
 import { createRequire } from "node:module";
 import pino from "pino";
 
+import { Config } from "../lib/config/config.js";
+
 const require = createRequire(import.meta.url);
-let Config = require("../../config/config.json");
 
 let logger = pino(
   {

@@ -4,6 +4,7 @@ import router from "express-promise-router";
 import { createRequire } from "node:module";
 
 import { CustomClient } from "../extensions/index.js";
+import { Config } from "../lib/config/config.js";
 import { mapClass } from "../middleware/index.js";
 import {
   GetShardsResponse,
@@ -15,7 +16,6 @@ import { Logger } from "../services/index.js";
 import { Controller } from "./index.js";
 
 const require = createRequire(import.meta.url);
-let Config = require("../../config/config.json");
 let Logs = require("../../lang/logs.json");
 
 export class ShardsController implements Controller {

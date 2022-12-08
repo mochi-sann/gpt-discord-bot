@@ -9,6 +9,7 @@ import os from "node:os";
 import typescript from "typescript";
 
 import { InfoOption } from "../../enums/index.js";
+import { Config } from "../../lib/config/config.js";
 import { Language } from "../../models/enum-helpers/index.js";
 import { EventData } from "../../models/internal-models.js";
 import { Lang } from "../../services/index.js";
@@ -16,7 +17,6 @@ import { InteractionUtils, ShardUtils } from "../../utils/index.js";
 import { Command, CommandDeferType } from "../index.js";
 
 const require = createRequire(import.meta.url);
-let Config = require("../../../config/config.json");
 let TsConfig = require("../../../tsconfig.json");
 
 export class InfoCommand implements Command {

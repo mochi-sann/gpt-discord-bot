@@ -2,6 +2,7 @@ import { ActivityType, ShardingManager } from "discord.js";
 import { createRequire } from "node:module";
 
 import { CustomClient } from "../extensions/index.js";
+import { Config } from "../lib/config/config.js";
 import { BotSite } from "../models/config-models.js";
 import { HttpService, Lang, Logger } from "../services/index.js";
 import { ShardUtils } from "../utils/index.js";
@@ -9,7 +10,6 @@ import { Job } from "./index.js";
 
 const require = createRequire(import.meta.url);
 let BotSites: BotSite[] = require("../../config/bot-sites.json");
-let Config = require("../../config/config.json");
 let Logs = require("../../lang/logs.json");
 
 export class UpdateServerCountJob implements Job {

@@ -11,13 +11,13 @@ import { createRequire } from "node:module";
 
 import { Command, CommandDeferType } from "../commands/index.js";
 import { DiscordLimits } from "../constants/index.js";
+import { Config } from "../lib/config/config.js";
 import { EventData } from "../models/internal-models.js";
 import { EventDataService, Lang, Logger } from "../services/index.js";
 import { CommandUtils, InteractionUtils } from "../utils/index.js";
 import { EventHandler } from "./index.js";
 
 const require = createRequire(import.meta.url);
-let Config = require("../../config/config.json");
 let Logs = require("../../lang/logs.json");
 
 export class CommandHandler implements EventHandler {
