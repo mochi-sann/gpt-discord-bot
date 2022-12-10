@@ -1,5 +1,6 @@
 import { ChatInputCommandInteraction, PermissionsString } from "discord.js";
 import { RateLimiter } from "discord.js-rate-limiter";
+import { ChatGptSendMessage } from "../../lib/chat-gpt.js";
 
 import { Language } from "../../models/enum-helpers/index.js";
 import { EventData } from "../../models/internal-models.js";
@@ -17,9 +18,20 @@ export class GptCommand implements Command {
     intr: ChatInputCommandInteraction,
     data: EventData
   ): Promise<void> {
+    let args = {
+      option: intr.options.getString(
+        Lang.getRef("arguments.text", Language.Default)
+      ),
+    };
+    console.log(args);
+    const response = await ChatGptSendMessage(args.option);
     await InteractionUtils.send(
       intr,
-      Lang.getEmbed("displayEmbeds.gpt", data.lang)
+      `# text
+  ${args.option}
+
+  # 返答 
+  ${response}`
     );
   }
 }
