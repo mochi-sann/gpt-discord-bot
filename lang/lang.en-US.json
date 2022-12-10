@@ -205,7 +205,8 @@
       "viewDateSent": "View Date Sent"
     },
     "arguments": {
-      "option": "option"
+      "option": "option",
+      "text": "text"
     },
     "commandDescs": {
       "help": "Get help with commands, permissions, FAQ, etc.",
@@ -215,7 +216,8 @@
     },
     "argDescs": {
       "helpOption": "Option.",
-      "infoOption": "Option."
+      "infoOption": "Option.",
+      "gptOptions": "Option."
     },
     "fields": {
       "commands": "Commands",
@@ -268,6 +270,11 @@
       "commands": "Commands",
       "permissions": "Permissions",
       "faq": "FAQ"
+    },
+    "gptOptions": {
+      "about": "About",
+      "translate": "Translate",
+      "dev": "Dev"
     },
     "infoOptions": {
       "about": "About",

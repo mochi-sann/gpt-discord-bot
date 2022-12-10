@@ -56,7 +56,7 @@ export const ChatCommandMetadata: {
     name_localizations: Lang.getRefLocalizationMap("chatCommands.gpt"),
     description: Lang.getRef("commandDescs.gpt", Language.Default),
     description_localizations: Lang.getRefLocalizationMap("commandDescs.gpt"),
-    dm_permission: true,
+    dm_permission: false,
     default_member_permissions: undefined,
   },
 };

@@ -62,4 +62,13 @@ export class Args {
       },
     ],
   };
+  public static readonly GPT_OPTION: APIApplicationCommandBasicOption = {
+    name: Lang.getRef("arguments.text", Language.Default),
+    name_localizations: Lang.getRefLocalizationMap("arguments.text"),
+    description: Lang.getRef("argDescs.helpOption", Language.Default),
+    description_localizations: Lang.getRefLocalizationMap(
+      "argDescs.helpOption"
+    ),
+    type: ApplicationCommandOptionType.String,
+  };
 }
